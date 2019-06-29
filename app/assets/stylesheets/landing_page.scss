@@ -2,3 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "materialize";
+
+/* @font-face{
+     font-family: "Poppins Bold" , sans-serif;
+
+     src: font-url("Poppins-Bold.ttf"),
+     format("truetype");
+     font-weight: normal;   
+     font-style: normal;
+}
+@font-face{
+     font-family: "Poppins Medium" , sans-serif;
+
+     src: 
+     font-url("Poppins-Medium.ttf"),
+     format("truetype");
+     font-weight: normal;   
+     font-style: normal;
+     
+} */
+
+/* @font-face{
+    font-family: "Poppins SemiBold" , sans-serif;
+
+    src: font-url("Poppins-SemiBold.ttf"),
+    format("truetype");
+    font-weight: normal;   
+    font-style: normal;
+    
+} */
+    
+body{
+    background: #B6C6BC;
+    font-family: 'Poppins';
+}
