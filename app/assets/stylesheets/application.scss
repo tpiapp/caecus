@@ -40,5 +40,9 @@ nav{
 
 .mylogo{
     width: 60px;
-    height: 60px;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
