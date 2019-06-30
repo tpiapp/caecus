@@ -10,6 +10,7 @@ body{
 
 .main-title{
     font-size: 10rem;
+    margin-top: 0;
 }
 
 
@@ -31,4 +32,13 @@ body{
 
 .red-button:hover{
     background-color: rgba(180, 3, 3, 0.5);
+}
+
+nav{
+    background-color: #D9CDB8;
+}
+
+.mylogo{
+    width: 60px;
+    height: 60px;
 }
