@@ -20,13 +20,17 @@
     <%= stylesheet_link_tag    'fonts' %>
     <%= stylesheet_link_tag    'user_panel' %>
     <%= stylesheet_link_tag    'confirmation' %>
+    <%= stylesheet_link_tag    'social_group' %>
+    <%= stylesheet_link_tag    'complaint' %>
 
     <%= javascript_include_tag    'application.js' %>
 </head>
 
 <body>
     <script>
-        $('select').formSelect(); //Sin esto los select no se muestran
+        $(document).ready(function () {
+            $('select').formSelect(); //Sin esto los select no se muestran
+        });
     </script>
     <%= yield %>
 </body>

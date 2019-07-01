@@ -2,13 +2,15 @@
 
 <div class="container">
   <div class="row">
-    <h1 class="center user-panel-title">Formulario de denuncia</h1>
-    <p class="center">Si estas de acuerdo con compartir tu información de cuerdo a lo expresado anteriormente,
-      te solicitamos llenar el siguiente formulario.
-    </p>
+    <span class="col s8 offset-s2">
+      <h1 class="user-panel-title center">Formulario de denuncia</h1>
+      <p class="center">Si estas de acuerdo con compartir tu información de cuerdo a lo expresado anteriormente,
+        te solicitamos llenar el siguiente formulario.
+      </p>
+    </span>
   </div>
   <div class="row">
-    <form class="col s8 complaint-form">
+    <form class="col s10 offset-s1">
       <div class="row">
         <div class="input-field col s6">
           <select>
@@ -20,13 +22,13 @@
           <label>Departamento:</label>
         </div>
         <div class="input-field col s6">
-          <select>
+          <select id="municipio">
             <option value="" disabled selected></option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </select>
-          <label>Municipio:</label>
+          <label for="municipio">Municipio:</label>
         </div>
       </div>
       <div class="row">
@@ -57,9 +59,8 @@
         </div>
       </div>
       <br>
-      <button href="#" class="btn waves-effect waves-light right" type="submit" name="action">Continuar
-        <!-- <i class="material-icons right">send</i> -->
-      </button>
+      <a onclick="" href="<%= social_group_path %>" class="waves-effect waves-light btn right">Continuar</a>
+      <a onclick="" href="<%= confirmation_path %>" class="waves-effect waves-light btn left">Volver</a>
     </form>
   </div>
 </div>

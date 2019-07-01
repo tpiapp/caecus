@@ -36,5 +36,7 @@ $(document).ready(function () {
 	}); // Formateo de la visualización de la fecha
 	
 	$('select').formSelect(); //Sin esto los select no se muestran
+
 });
+
 

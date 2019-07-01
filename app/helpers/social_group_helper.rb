@@ -1,0 +1,2 @@
+module SocialGroupHelper
+end

@@ -1,0 +1,7 @@
+// Place all the styles related to the complaint controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input#complaint-departamento.validate, input#complaint-municipio.validate, input#complaint-fecha.datepicker, input#complaint-email.validate, textarea#complaint-textarea1.materialize-textarea, input#complaint-archivo.validate {
+    margin-top: 15px;
+}
