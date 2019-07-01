@@ -1,0 +1,36 @@
+<%= render "layouts/header" %>
+
+<div class="container ">
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col s12 ">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= asset_path('mapa.png') %>" width="300px" height="300px">
+          <span class="card-title confirmation-atencion">ATENCIÓN</span>
+        </div>
+        <div class="card-content">
+          <p class="confirmation-paragraph">Si te reconoces como defensor de derechos humanos o eres lider social, comunal o 
+              indigena y has sido víctima de agresiones que pongan en peligro tu vida, tu 
+              integridad o tu trabajo, te proponemos compartir dicha información con nosotros; 
+              de forma que podamos hacerla llegar a las organizaciones comprometidas con la 
+              prevención de agresiones y protección de la vida de las personas que corren 
+              riesgo por su labor como defensores de derechos humanos. 
+              <br><br>
+              El ingreso de esta información a este registro es absolutamente voluntario y tiene 
+              fines netamente estadísticos, ya que el Programa no asume el seguimiento, tramite 
+              o transferencia de ninguna denuncia consignada en esta web a autoridades.
+              <br><br>
+              A continuación encontrarás un formulario donde podrás adjuntar la información 
+              relacionada con tu caso. Puedes incluir archivos con los comunicados o denuncias
+              públicas sobre tu caso.</p>
+        </div>
+        <div class="card-action">
+          <a href="<%= root_path %>">Volver</a>
+          <a href="<%= user_panel_path %>">Continuar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

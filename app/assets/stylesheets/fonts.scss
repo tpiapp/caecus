@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
-body {
+@font-face{
+    font-family: 'Roboto';
+    src: font-url('Roboto-Light.ttf') format('truetype');
+    font-weight: lighter;   
+    font-style: normal;
+}
+
+body, ::placeholder, input#email.validate, input#fecha.datepicker, input.select-dropdown.dropdown-trigger, textarea#textarea1.materialize-textarea, button {
     font-family: 'Poppins';
 }

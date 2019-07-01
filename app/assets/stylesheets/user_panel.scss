@@ -1,3 +1,36 @@
 // Place all the styles related to the user_panel controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-panel-title{
+    margin-top: 13%;
+}
+
+form.col.s8.complaint-form {
+    position: absolute;
+    top: 40%;
+    left: 18%; 
+}
+
+.input-field>label{
+    color: black;
+}
+
+::placeholder{
+    color: rgba(0, 0, 0, 0.404);
+    font-size: 16px;
+}
+
+.input-field > label {
+    font-size: 23px;
+}
+
+.select-wrapper + label {
+    font-size: 18px;
+}
+
+input#email.validate, input#fecha.datepicker, input.select-dropdown.dropdown-trigger, textarea#textarea1.materialize-textarea{
+    margin-top: 15px;
+}
+
+
