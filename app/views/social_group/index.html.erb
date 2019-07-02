@@ -1,13 +1,10 @@
 <%= render "layouts/header" %>
 
-<div class="container">
+<div class="container" >
   <div class="row">
-    <form class="col s5 social-group">
-      <div class="row"></div>
-      <div class="row"></div>
-      <div class="row"></div>
-      <div class="input-field col s12">
-        <select>
+    <form class="col s7 social-group" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div class="grup input-field col s12">
+        <select id="grupo" required>
           <option value="" disabled selected></option>
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
@@ -18,7 +15,19 @@
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
-      <a onclick="" href="<%= complaint_path %>" class="waves-effect waves-light btn right">Continuar</a>
+      <div class="org input-field col s12">
+        <select id="organizacion">
+          <option value="" disabled selected></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <label>Selecciona la organización con la cual te gustaría compartir tu caso:</label>
+      </div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <a onclick="verify(event);" href="<%= complaint_path %>" class="waves-effect waves-light btn right">Continuar</a>
       <a onclick="" href="<%= user_panel_path %>" class="waves-effect waves-light btn left">Volver</a>
     </form>
   </div>

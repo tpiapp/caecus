@@ -37,6 +37,65 @@ $(document).ready(function () {
 	
 	$('select').formSelect(); //Sin esto los select no se muestran
 
+	$('.modal').modal();
 });
+
+function comeBack(event){	
+	if (confirm("Seguro que deseas salir?")){
+	} else {
+		event.preventDefault();
+	}
+}
+
+function verify(event){
+
+  if ($("select#departamento").val() === null){ 
+    event.preventDefault();
+    $(".dep input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
+  }else{
+    $(".dep input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  }
+
+  if ($("select#municipio").val() === null){
+    event.preventDefault();
+    $(".mun input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
+  }else{
+    $(".mun input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  }
+  
+  if ($("input#fecha").val() === ""){
+    event.preventDefault();
+    $("input#fecha").css("border-bottom-color", "red");
+  }else{
+    $("input#fecha").css("border-bottom-color", "#9e9e9e");    
+  }
+  
+  if ($("textarea#textarea1").val() === ""){
+    event.preventDefault();
+    $("textarea#textarea1").css("border-bottom-color", "red");
+    alert("Los campos en rojo son obligatorios");
+  }else{
+    $("textarea#textarea1").css("border-bottom-color", "#9e9e9e");    
+  }
+  
+
+
+
+  if ($("select#grupo").val() === null){ 
+    event.preventDefault();
+    $(".grup input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
+  }else{
+    $(".grup input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  }
+
+  if ($("select#organizacion").val() === null){ 
+    event.preventDefault();
+    $(".org input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
+    alert("Los campos en rojo son obligatorios");
+  }else{
+    $(".org input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  }
+
+}
 
 

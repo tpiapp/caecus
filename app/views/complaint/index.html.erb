@@ -1,36 +1,46 @@
 <%= render "layouts/header" %>
 
+<script>
+  $(document).ready(function (){
+    $('.modal').modal();
+  });
+</script>
+
 <div class="container">
   <div class="row">
     <span class="col s8 offset-s2">
-      <h1>¡Tu denuncia ha sido registrada!</h1>
+      <h1 class="center">¡Tu denuncia ha sido registrada!</h1>
     </span>
   </div>
   <form class="col s10 offset-s1">
     <div class="row">
-      <div class="input-field col s6">
+      <div class="input-field col s4">
           <input id="complaint-departamento" type="text" value="Departamento1" class="validate" disabled/>
         <label for="complaint-departamento" class="active">Departamento:</label>
       </div>
-      <div class="input-field col s6">
+      <div class="input-field col s4">
         <input id="complaint-municipio" type="text" value="Municipio1" class="validate" disabled/>
         <label for="complaint-municipio" class="active">Municipio:</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="complaint-social-group" type="text" value="GrupoSocial1" class="validate" disabled/>
+        <label for="complaint-social-group" class="active">Grupo social:</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
         <input id="complaint-fecha" type="date" value="2019-07-19" class="datepicker" disabled/>
-        <label for="complaint-fecha">Fecha del suceso</label>
+        <label for="complaint-fecha">Fecha del suceso:</label>
       </div>
       <div class="input-field col s6">
         <input id="complaint-email" type="email" value="email@gmail.com" class="validate" disabled>
-        <label for="complaint-email" class="active">Correo de contacto</label>
+        <label for="complaint-email" class="active">Correo de contacto:</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
         <textarea id="complaint-textarea1" value="" class="materialize-textarea" disabled>Default comment</textarea>
-        <label for="complaint-textarea1" class="active">Cuentanos como sucedieron los hechos</label>
+        <label for="complaint-textarea1" class="active">Cuentanos como sucedieron los hechos:</label>
       </div>
     </div>
     <div class="row">
@@ -40,6 +50,15 @@
       </div>
     </div>
     <br>
-    <a onclick="" href="<%= social_group_path %>" class="waves-effect waves-light btn ">Aceptar</a>
+    <a href="#modal1" class="waves-effect waves-light btn modal-trigger">Finalizar</a>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="center">Gracias por compartirnos tu caso</h4>
+        <p class="center">Espera el aviso de alguna de las entidades que seleccionaste</p>
+      </div>
+      <div class="modal-footer">
+        <a href="<%= root_path %>" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+      </div>
+    </div>
   </form>
 </div>

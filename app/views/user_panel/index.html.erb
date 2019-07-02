@@ -12,8 +12,8 @@
   <div class="row">
     <form class="col s10 offset-s1">
       <div class="row">
-        <div class="input-field col s6">
-          <select>
+        <div class="dep input-field col s6">
+          <select id="departamento">
             <option value="" disabled selected></option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
@@ -21,7 +21,7 @@
           </select>
           <label>Departamento:</label>
         </div>
-        <div class="input-field col s6">
+        <div class="mun input-field col s6">
           <select id="municipio">
             <option value="" disabled selected></option>
             <option value="1">Option 1</option>
@@ -34,17 +34,17 @@
       <div class="row">
         <div class="input-field col s6">
           <input id="fecha" type="date" class="datepicker" />
-          <label for="fecha">Fecha del suceso</label>
+          <label for="fecha">Fecha del suceso:</label>
         </div>
         <div class="input-field col s6">
           <input id="email" type="email" class="validate" placeholder=" ">
-          <label for="email" class="active">Correo de contacto</label>
+          <label for="email" class="active">Correo de contacto:</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea" placeholder=" "></textarea>
-          <label for="textarea1" class="active">Cuentanos como sucedieron los hechos</label>
+          <label for="textarea1" class="active">Cuentanos como sucedieron los hechos:</label>
         </div>
       </div>
       <div class="row">
@@ -59,8 +59,8 @@
         </div>
       </div>
       <br>
-      <a onclick="" href="<%= social_group_path %>" class="waves-effect waves-light btn right">Continuar</a>
-      <a onclick="" href="<%= confirmation_path %>" class="waves-effect waves-light btn left">Volver</a>
+      <a onclick="verify(event);" href="<%= social_group_path %>" class="waves-effect waves-light btn right">Continuar</a>
+      <a onclick="comeBack(event);" href="<%= confirmation_path %>" class="waves-effect waves-light btn left">Volver</a>
     </form>
   </div>
 </div>
