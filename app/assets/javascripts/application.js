@@ -15,87 +15,114 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function () {
-	
-	$('.datepicker').datepicker({
-		format: 'yyyy-mm-dd',
-		i18n: {
-			months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-			monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-			weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-			weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
-		},
-		selectMonths: true,
-		selectYears: 100, // Puedes cambiarlo para mostrar más o menos años
-		today: 'Hoy',
-		clear: 'Limpiar',
-		close: 'Ok',
-		labelMonthNext: 'Siguiente mes',
-		labelMonthPrev: 'Mes anterior',
-		labelMonthSelect: 'Selecciona un mes',
-		labelYearSelect: 'Selecciona un año',
-	}); // Formateo de la visualización de la fecha
-	
-	$('select').formSelect(); //Sin esto los select no se muestran
 
-	$('.modal').modal();
+  $('.datepicker').datepicker({
+    format: 'yyyy-mm-dd',
+    i18n: {
+      months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+      monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+      weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+      weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+    },
+    selectMonths: true,
+    selectYears: 100,
+    today: 'Hoy',
+    clear: 'Limpiar',
+    close: 'Ok',
+    labelMonthNext: 'Siguiente mes',
+    labelMonthPrev: 'Mes anterior',
+    labelMonthSelect: 'Selecciona un mes',
+    labelYearSelect: 'Selecciona un año',
+  }); // Formateo de la visualización de la fecha
+
+  $('select').formSelect(); //Sin esto los select no se muestran
+
+  $('.modal').modal();
+
+  // Arrastrar informacion hacia el grupo social
+  $("#comp_form_continue").click(function () {
+    var departamento = $("#departamento").val();
+    var municipio = $("#municipio").val();
+    var fecha = $("#fecha").val();
+    var correo = $("#email").val();
+    var hechos = $("#textarea1").val();
+    var archivo = $("#archivo").val();
+
+    sessionStorage.setItem('departamento', departamento);
+    sessionStorage.setItem('municipio', municipio);
+    sessionStorage.setItem('fecha', fecha);
+    sessionStorage.setItem('correo', correo);
+    sessionStorage.setItem('hechos', hechos);
+    sessionStorage.setItem('archivo', archivo);
+  });
+
+  //Arrastrar informacion hacia el submit final
+  $("#social_group_continue").click(function () {    
+    var grupo = $("#grupo").val();
+    var organizacion = $("#organizacion").val();
+    sessionStorage.setItem('grupo', grupo);
+    sessionStorage.setItem('organizacion', organizacion);
+  });
+
 });
 
-function comeBack(event){	
-	if (confirm("¿Seguro que deseas salir?")){
-	} else {
-		event.preventDefault();
-	}
+function comeBack(event) {
+  if (confirm("¿Seguro que deseas salir?")) {
+  } else {
+    event.preventDefault();
+  }
 }
 
-function verify(event){
+function verify(event) {
 
-  if ($("select#departamento").val() === null){ 
+  //Form verification
+  if ($("select#departamento").val() === null) {
     event.preventDefault();
     $(".dep input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
-  }else{
-    $(".dep input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $(".dep input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");
   }
 
-  if ($("select#municipio").val() === null){
+  if ($("select#municipio").val() === null) {
     event.preventDefault();
     $(".mun input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
-  }else{
-    $(".mun input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $(".mun input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");
   }
-  
-  if ($("input#fecha").val() === ""){
+
+  if ($("input#fecha").val() === "") {
     event.preventDefault();
     $("input#fecha").css("border-bottom-color", "red");
-  }else{
-    $("input#fecha").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $("input#fecha").css("border-bottom-color", "#9e9e9e");
   }
-  
-  if ($("textarea#textarea1").val() === ""){
+
+  if ($("textarea#textarea1").val() === "") {
     event.preventDefault();
     $("textarea#textarea1").css("border-bottom-color", "red");
     alert("Los campos en rojo son obligatorios");
-  }else{
-    $("textarea#textarea1").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $("textarea#textarea1").css("border-bottom-color", "#9e9e9e");
   }
-  
 
-
-
-  if ($("select#grupo").val() === null){ 
+  //Social group verification
+  if ($("select#grupo").val() === null) {
     event.preventDefault();
     $(".grup input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
-  }else{
-    $(".grup input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $(".grup input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");
   }
 
-  if ($("select#organizacion").val() === null){ 
+  if ($("select#organizacion").val() === null) {
     event.preventDefault();
     $(".org input.select-dropdown.dropdown-trigger").css("border-bottom-color", "red");
     alert("Los campos en rojo son obligatorios");
-  }else{
-    $(".org input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");    
+  } else {
+    $(".org input.select-dropdown.dropdown-trigger").css("border-bottom-color", "#9e9e9e");
   }
 
 }
+
+
 
 
