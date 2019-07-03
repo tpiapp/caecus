@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @complaint.department %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @complaint.city %>
+</p>
+
+<p>
+  <strong>Date event:</strong>
+  <%= @complaint.date_event %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @complaint.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @complaint.description %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @complaint.file %>
+</p>
+
+<p>
+  <strong>Clasification:</strong>
+  <%= @complaint.clasification %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @complaint.organization %>
+</p>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>

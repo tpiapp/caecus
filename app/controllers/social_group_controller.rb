@@ -1,2 +1,0 @@
-class SocialGroupController < ApplicationController
-end

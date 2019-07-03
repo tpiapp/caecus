@@ -41,7 +41,7 @@ $(document).ready(function () {
 });
 
 function comeBack(event){	
-	if (confirm("Seguro que deseas salir?")){
+	if (confirm("¿Seguro que deseas salir?")){
 	} else {
 		event.preventDefault();
 	}
