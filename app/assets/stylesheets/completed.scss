@@ -6,10 +6,10 @@ h1.complete-title{
     color: #022840;
 }
 
-input#complaint-departamento.validate, input#complaint-municipio.validate, input#complaint-social-group.validate, input#complaint-fecha.datepicker, input#complaint-email.validate, textarea#complaint-textarea1.materialize-textarea, input#complaint-archivo.validate {
+input#complaint_department.validate, input#complaint_city.validate, input#complaint_clasification.validate, input#complaint_date_event.datepicker, input#complaint_email.validate, textarea#complaint_description.materialize-textarea, input#complaint_file.validate {
     margin-top: 15px;
 }
 
-input[type=text]:not(.browser-default):disabled, input#complaint-email.validate, input#complaint-fecha.datepicker, textarea#complaint-textarea1.materialize-textarea{
+input[type=text]:not(.browser-default):disabled, input#complaint_email.validate, input#complaint_date_event.datepicker, textarea#complaint_description.materialize-textarea{
     color: #000000b3;
 }

@@ -1,57 +1,60 @@
+ <%= javascript_include_tag    'application.js' %>
+
 <%= form_with(model: complaint, local: true) do |form| %>
-  <% if complaint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
 
-      <ul>
-      <% complaint.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+
+
+
+<div class="col s10 offset-s1" style="margin-bottom: 100px;">
+  <div class="row">
+    <div class="col s7 social-group" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div class="grup input-field col s12">
+        <%# <select id="complaint_clasification" required>
+          <option value="" disabled selected></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select> %>
+        <%= form.select(:clasification, options_for_select([["Option 1","Option 1"],["Option 2","Option 2"],["Option 3","Option 3"]]) ) %>
+        <label>Selecciona el grupo social al cual perteneces:</label>
+      </div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="org input-field col s12">
+        <%# <select id="complaint_organization">
+          <option value="" disabled selected></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select> %>
+        <%= form.select(:organization, options_for_select([["Option 1","Option 1"],["Option 2","Option 2"],["Option 3","Option 3"]]) ) %>
+        <label>Selecciona la organización con la cual te gustaría compartir tu caso:</label>
+      </div>
+
+      <%= form.text_field :department, class: "validate", style:"display:none"%>
+      <%= form.text_field :city, class: "validate", style:"display:none"%>
+      <%= form.text_field :date_event, class: "datepicker", style:"display:none"%>
+      <%= form.text_field :email, class: "validate", style:"display:none"%>
+      <%= form.text_field :description, class: "validate", style:"display:none"%>
+      <%= form.text_field :file, class: "validate", style:"display:none"%>
+
+      <br>
+
+      <div class="row"></div>
+      <div class="row"></div>
+      <div class="row"></div>
+
+      <!-- <a id="social_group_continue" onclick="verify(event); location.reload();" href="<%= completed_path %>"
+        class="waves-effect waves-light btn right">Continuar</a> -->
+        <%= form.submit "Continuar", class: "waves-effect waves-light btn right", style: "color: white;"%>
+      <a onclick="" href="<%= complaint_form_path %>" class="waves-effect waves-light btn left">Volver</a>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :department %>
-    <%= form.text_field :department %>
   </div>
-
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :date_event %>
-    <%= form.datetime_select :date_event %>
-  </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
 
-  <div class="field">
-    <%= form.label :file %>
-    <%= form.text_field :file %>
-  </div>
-
-  <div class="field">
-    <%= form.label :clasification %>
-    <%= form.text_field :clasification %>
-  </div>
-
-  <div class="field">
-    <%= form.label :organization %>
-    <%= form.text_field :organization %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

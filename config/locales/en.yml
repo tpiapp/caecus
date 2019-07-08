@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    label:
+      complaint:
+        department: "Departamento:"
+        city: "Municipio:"
+        date_event: "Fecha del suceso"
+        email: "Correo de contacto"
+        description: "Descripcion de los hechos"
+        organization: "Organizacion"
+        clasification: "Grupo social"
+        file: "Archivos"
