@@ -64,6 +64,20 @@ $(document).ready(function () {
     sessionStorage.setItem('organizacion', organizacion);
   });
 
+  //LLenar la denuncia final
+  $("#complaint-departamento").val(sessionStorage.getItem("departamento"));
+  $("#complaint-municipio").val(sessionStorage.getItem("municipio"));
+  $("#complaint-fecha").val(sessionStorage.getItem("fecha"));
+  $("#complaint-email").val(sessionStorage.getItem("correo"));
+  $("#complaint-textarea1").val(sessionStorage.getItem("hechos"));
+  $("#complaint-archivo").val(sessionStorage.getItem("archivo"));
+  $("#complaint-social-group").val(sessionStorage.getItem("grupo"));
+
+  //Mantener color de los input al hacer click
+  $("textarea#textarea1.materialize-textarea, input#email.validate, input#fecha.datepicker").focus(function(){    
+    $("label.active").css("color", "#011826");
+  });
+
 });
 
 function comeBack(event) {

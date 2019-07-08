@@ -1,7 +1,7 @@
 @import "materialize";
 
 body{
-    background: #B6C6BC;
+    background: #A6A6A6;
     font-size: 20px;
 }
 
@@ -12,12 +12,12 @@ body{
 
 .landing_button{
     width: 100%;
-    background-color: #E8B9B1;
-    color:black;
+    background-color: #011826;
+    color:white;
 }
 
 .landing_button:hover{
-    background-color: rgb(180, 149, 143)
+    background-color: #011826a6;
 }
 
 .red-button{
@@ -30,7 +30,7 @@ body{
 }
 
 nav{
-    background-color: #D9CDB8;
+    background-color: #011826;
 }
 
 .mylogo{
@@ -40,4 +40,10 @@ nav{
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.header-title{
+    margin: 0;
+    color: #cecece;
+    padding: 10px 70px;
 }

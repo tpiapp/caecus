@@ -7,7 +7,7 @@
     <div class="col s12 ">
       <div class="card">
         <div class="card-image">
-          <img src="<%= asset_path('mapa.png') %>" width="300px" height="300px">
+          <img src="<%= asset_path('lideres.jpeg') %>" height="400px">
           <span class="card-title confirmation-atencion">ATENCIÓN</span>
         </div>
         <div class="card-content">
@@ -28,7 +28,7 @@
         </div>
         <div class="card-action">
           <a href="<%= root_path %>">Volver</a>
-          <a href="<%= complaint_form_path %>">Continuar</a>
+          <a href="<%= complaint_form_path %>" onclick="location.reload();" >Continuar</a>
         </div>
       </div>
     </div>

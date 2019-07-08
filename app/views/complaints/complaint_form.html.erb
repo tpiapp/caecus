@@ -34,7 +34,7 @@
       <div class="row">
         <div class="input-field col s6">
           <input id="fecha" type="date" class="datepicker" />
-          <label for="fecha">Fecha del suceso:</label>
+          <label for="fecha" class="active">Fecha del suceso:</label>
         </div>
         <div class="input-field col s6">
           <input id="email" type="email" class="validate" placeholder=" ">
@@ -59,7 +59,7 @@
         </div>
       </div>
       <br>
-      <a id="comp_form_continue" onclick="verify(event);" href="<%= social_group_path %>" class="waves-effect waves-light btn right">Continuar</a>
+      <a id="comp_form_continue" onclick="verify(event);" href="<%= social_group_path %>" class="waves-effect waves-light btn right" onclick="location.reload()">Continuar</a>
       <a onclick="comeBack(event);" href="<%= confirmation_path %>" class="waves-effect waves-light btn left">Volver</a>
     </form>
   </div>

@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1.complete-title{
+    color: #022840;
+}
+
 input#complaint-departamento.validate, input#complaint-municipio.validate, input#complaint-social-group.validate, input#complaint-fecha.datepicker, input#complaint-email.validate, textarea#complaint-textarea1.materialize-textarea, input#complaint-archivo.validate {
     margin-top: 15px;
+}
+
+input[type=text]:not(.browser-default):disabled, input#complaint-email.validate, input#complaint-fecha.datepicker, textarea#complaint-textarea1.materialize-textarea{
+    color: #000000b3;
 }

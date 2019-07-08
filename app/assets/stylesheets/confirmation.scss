@@ -6,5 +6,18 @@ p.confirmation-paragraph{
 }
 
 .card .card-image .card-title.confirmation-atencion{
-    color: black;
+    color: #F2F2F2;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color: #022840;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover{
+    color: #02284075;
+}
+
+span.card-title.confirmation-atencion{
+    background-color: #595959bd;
+    width: 100%;
 }

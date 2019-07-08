@@ -3,16 +3,19 @@
 <script>
   $(document).ready(function (){
     $('.modal').modal();
+
+
+
   });
 </script>
 
 <div class="container">
   <div class="row">
     <span class="col s8 offset-s2">
-      <h1 class="center">¡Tu denuncia ha sido registrada!</h1>
+      <h1 class="center complete-title">¡Tu denuncia ha sido registrada!</h1>
     </span>
   </div>
-  <form class="col s10 offset-s1">
+  <form class="col s10 offset-s1" style="margin-bottom: 100px;">
     <div class="row">
       <div class="input-field col s4">
           <input id="complaint-departamento" type="text" value="Departamento1" class="validate" disabled/>
@@ -39,7 +42,7 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="complaint-textarea1" value="" class="materialize-textarea" disabled>Default comment</textarea>
+        <textarea id="complaint-textarea1" value="" class="materialize-textarea" style="overflow-y: scroll; height: 200px;" disabled>Default comment</textarea>
         <label for="complaint-textarea1" class="active">Cuentanos como sucedieron los hechos:</label>
       </div>
     </div>
