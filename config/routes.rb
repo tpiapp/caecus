@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/complaint_form' =>'complaints#complaint_form', :as => :complaint_form
   get '/completed' => 'complaints#complaint_completed', :as => :completed
   get '/confirmation' =>'complaints#confirmation', :as => :confirmation
-  get '/social_group' =>'complaints#social_group', :as => :social_group
+  get '/user_panel' => 'user_panel#index', :as => :user_panel
  
 
   

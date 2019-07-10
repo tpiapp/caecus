@@ -1,0 +1,52 @@
+<!-- Generacion del mapa con todos los reportes hechos
+<script>
+    var xlat, xlng;
+    var loc_crime;
+    var details;
+    var data = [];
+    var data_susp = [];
+    var data_transp = [];
+    var data_security = [];
+    var report_url;
+
+    <% @temp.each do | report | %>
+          xlat = "<%= report.latitude %>" ;
+          xlng = "<%= report.longitude %> ";
+          details = "<%= report.details %> ";
+          report_url = "<%=report_path(report.id)%>";
+          tipo_t = "<%= report.tipo_transp %>";
+          num_ruta = "<%= report.id_route %>";
+          tipo = "<%= report.tipo %>";
+          xlat = parseFloat(xlat);
+          xlng = parseFloat(xlng);
+          tuple = [xlat, xlng, details, report_url, tipo_t, num_ruta,tipo];
+          data.push(tuple);
+    <% end %>
+
+    <% @suspect_temp.each do | suspect | %>
+          xlat = "<%= suspect.latitude %>" ;
+          xlng = "<%= suspect.longitude %> ";
+          details = "<%= suspect.details %> ";
+          report_url = "<%=suspect_path(suspect.id)%>";
+          report_type = "Sospechoso";
+          xlat = parseFloat(xlat);
+          xlng = parseFloat(xlng);
+          tuple = [xlat, xlng, details,report_url,report_type,report_type];
+          data_susp.push(tuple);
+    <% end %>
+
+
+
+    <% @security.each do | security | %>
+          xlat = "<%= security.latitude %>" ;
+          xlng = "<%= security.longitude %> ";
+          details = "<%= security.details %> ";
+          report_url = "<%=security_news_path(security.id)%>";
+          xlat = parseFloat(xlat);
+          xlng = parseFloat(xlng);
+          report_type = "Seguridad";
+          tuple = [xlat, xlng, details,report_url,report_type,report_type];
+          data_security.push(tuple);
+    <% end %>
+
+</script> -->

@@ -12,8 +12,10 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 Rails.application.config.assets.precompile += %w( application.js )
+Rails.application.config.assets.precompile += %w( gm_user-panel.js )
 Rails.application.config.assets.precompile += %w( fonts.css )
 Rails.application.config.assets.precompile += %w( complaint_form.css )
+Rails.application.config.assets.precompile += %w( map_styles.css )
 Rails.application.config.assets.precompile += %w( confirmation.css )
 Rails.application.config.assets.precompile += %w( social_group.css )
 Rails.application.config.assets.precompile += %w( completed.css )

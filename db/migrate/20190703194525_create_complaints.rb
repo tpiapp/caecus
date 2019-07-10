@@ -9,6 +9,8 @@ class CreateComplaints < ActiveRecord::Migration[5.2]
       t.string :file
       t.string :clasification
       t.string :organization
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end
