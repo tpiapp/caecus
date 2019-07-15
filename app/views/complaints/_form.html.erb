@@ -6,26 +6,16 @@
   <div class="row">
     <div class="col s7 social-group" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
       <div class="grup input-field col s12">
-        <%# <select id="complaint_clasification" required>
-          <option value="" disabled selected></option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select> %>
-        <%= form.select(:clasification, options_for_select([["Option 1","Option 1"],["Option 2","Option 2"],["Option 3","Option 3"]]) ) %>
+        
+        <%= form.select(:clasification, options_for_select([["Lider social","Lider social"],["Lider comunal","Lider comunal"],["Lider ambiental","Lider ambiental"], ["Lider de JAC","Lider de JAC"]]) ) %>
         <label>Selecciona el grupo social al cual perteneces:</label>
       </div>
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
       <div class="org input-field col s12">
-        <%# <select id="complaint_organization">
-          <option value="" disabled selected></option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select> %>
-        <%= form.select(:organization, options_for_select([["Option 1","Option 1"],["Option 2","Option 2"],["Option 3","Option 3"]]) ) %>
+      
+        <%= form.select(:organization, options_for_select([["Somos Defensores","Somos Defensores"],["FLIP","FLIP"],["CINEP","CINEP"],["No estoy seguro","No estoy seguro"]]) ) %>
         <label>Selecciona la organización con la cual te gustaría compartir tu caso:</label>
       </div>
 

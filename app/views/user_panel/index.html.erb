@@ -21,23 +21,46 @@
 
 }
 </style>
+
+<!-- Generacion del mapa con todos los complaintes hechos-->
+<script>
+    var xlat, xlng;
+    var loc_crime;
+    var details;
+    var data = [];
+    var complaint_url;
+
+    <% @complaints.each do | complaint | %>
+          xlat = "<%= complaint.latitude %>" ;
+          xlng = "<%= complaint.longitude %> ";
+          details = "<%= complaint.description %> ";
+          city = "<%= complaint.city %> ";
+          date = "<%= complaint.date_event %> ";
+          xlat = parseFloat(xlat);
+          xlng = parseFloat(xlng);
+          tuple = [xlat, xlng, details, city, date];
+          data.push(tuple);
+    <% end %>
+
+</script> 
+
 </head>
 
 <div class="main" style="height:100%; width: 100%;">
 
-    <div id="floating-panel">
+    <!-- <div id="floating-panel">
         <button class="btn activation" id="heatMap_report" onclick="toggleHeatmap()">Mapa de calor</button>
         <button class="btn activation" id="heatMap_radius" onclick="changeRadius()">Aumentar radio</button>
         <button class="btn activation" id="heatMap_gradient" onclick="changeGradient()">Cambio de color</button>
-    </div>
+    </div> -->
     <div id="map" class="map_user-panel"></div>
 
 </div>
 
 
 
-
-<!-- Modal Structure -->
+<!-- 
+Modal Structure
 <div id="modal1" class="modal">
   <div class="modal-content">
     <div class="">
@@ -309,7 +332,7 @@ $(document).ready(function(){
   }
 
 
-</script>
+</script> -->
 
 <%= render "layouts/map-actions" %>
 <%= javascript_include_tag "gm_user-panel" %>
